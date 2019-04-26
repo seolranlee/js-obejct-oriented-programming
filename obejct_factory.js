@@ -23,5 +23,5 @@ console.log('d1.getMonth()', d1.getMonth());
 console.log('Date', Date);
 
 
-console.log('Person()',Person());
+console.log('Person()',Person()); 
 console.log('new Person()',new Person());   // new를 붙이는 순간 일반적인 함수가 아니라 객체를 생성하는 생성자 함수가 된다.(constructor)
