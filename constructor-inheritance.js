@@ -19,9 +19,9 @@ PersonPlus.prototype = Object.create(Person.prototype); // 이게 표준
 PersonPlus.prototype.constructor = PersonPlus;
 // PersonPlus.prototype = Object.create(Person.prototype)를 쓰고 이걸 해주지 않으면 kim의 생성자 함수가 Person을 가리키게 된다. 왜냐면 PersonPlus.prototype이걸 아예 replace 하기 때문이다.
 
-// PersonPlus.prototype.sum = function () {
-//     return PersonPlus.prototype.__proto__.sum()+this.third;
-// };
+PersonPlus.prototype.sum = function () {
+    return Person.prototype.sum.call(this)+this.third;
+};
 
 PersonPlus.prototype.avg = function () {
     return (this.first + this.second + this.third) / 3;
